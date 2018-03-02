@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.render('index.hbs');
 });
+//
 
 app.get("/movieInfo", function(req, res){
   const movieTitle = req.query.movieTitle;
