@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js js,css,hbs",
+    "start": " source app-env && node server.js js,css,hbs",
     "start-dev": "source app-env && nodemon server.js js,css,hbs"
   },
   "author": "",
