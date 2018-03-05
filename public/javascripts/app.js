@@ -13,10 +13,7 @@ $(document).ready(function(){
         $.get(`/movieInfo?movieTitle=${movieTitle}`, function(response){
             poster.attr("src", response.poster);
             title.innerText = response.mTitle;
-        })
-
+        });
     }
-
   });
-
 });
