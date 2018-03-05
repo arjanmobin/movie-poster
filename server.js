@@ -19,10 +19,9 @@ app.get('/', (req, res) => {
 app.get("/movieInfo", function(req, res){
   const movieTitle = req.query.movieTitle;
   const apiKey = process.env.API_KEY;
-  console.log(apiKey);
 
 
-  axios.get(`http://www.omdbapi.com/?apikey=8fa6fee9&s=${movieTitle}`)
+  axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${movieTitle}`)
       .then(function(response){
           if(response.data.Search[0]){
               let movie = response.data.Search[0];
