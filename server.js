@@ -27,7 +27,7 @@ app.get("/movieInfo", function(req, res){
               let movie = response.data.Search[0];
               console.log(movie)
               res.json({
-                  mTitle: response.data.Search[0].Poster,
+                  name: movie.Title,
                   poster: movie.Poster
 
               });
