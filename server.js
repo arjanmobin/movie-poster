@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 
 app.get("/movieInfo", function(req, res){
   const movieTitle = req.query.movieTitle;
-  const apiKey = process.env.API_KEY;
-
+  // const apiKey = process.env.API_KEY;
+    const apiKey = "8fa6fee9";
 
   axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${movieTitle}`)
       .then(function(response){
@@ -28,7 +28,8 @@ app.get("/movieInfo", function(req, res){
               console.log(movie)
               res.json({
                   name: movie.Title,
-                  poster: movie.Poster
+                  poster: movie.Poster,
+                  year: movie.Year
 
               });
           }
